@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:testapp/core/common/widgets/custom_button.dart';
 import 'package:testapp/core/const/icons_path.dart';
+import 'package:testapp/features/auth/login/screen/login_screen.dart';
+import 'package:testapp/features/auth/signup/screen/signup_screen.dart';
 
 class SignUpController extends GetxController {
   // Text Controllers
@@ -75,7 +77,12 @@ class SignUpController extends GetxController {
 
               SizedBox(
                 width: double.infinity,
-                child: CustomButton(text: "Continue", onPressed: () {}),
+                child: CustomButton(
+                  text: "Continue",
+                  onPressed: () {
+                    Get.to(SignInScreen());
+                  },
+                ),
               ),
             ],
           ),
