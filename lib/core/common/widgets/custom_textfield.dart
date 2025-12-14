@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:msollaally/core/common/styles/global_text_style.dart';
+
+import '../styles/global_text_style.dart';
 
 class CustomTextField extends StatelessWidget {
   final TextEditingController controller;
@@ -8,7 +9,7 @@ class CustomTextField extends StatelessWidget {
   final bool isObscure;
   final Widget? suffixIcon;
   final int maxLines;
-  final double?width;
+  final double? width;
 
   const CustomTextField({
     super.key,
@@ -17,13 +18,13 @@ class CustomTextField extends StatelessWidget {
     this.isObscure = false,
     this.suffixIcon,
     this.maxLines = 1,
-    this.width
+    this.width,
   });
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: width??double.infinity,
+      width: width ?? double.infinity,
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(12),
@@ -49,7 +50,10 @@ class CustomTextField extends StatelessWidget {
           focusedBorder: InputBorder.none,
           disabledBorder: InputBorder.none,
           isDense: true,
-          contentPadding: const EdgeInsets.symmetric(horizontal: 14, vertical: 16),
+          contentPadding: const EdgeInsets.symmetric(
+            horizontal: 14,
+            vertical: 16,
+          ),
           suffixIcon: suffixIcon,
         ),
       ),
