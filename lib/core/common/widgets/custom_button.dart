@@ -15,7 +15,8 @@ class CustomButton extends StatelessWidget {
     required this.onPressed,
     this.leading,
     this.vertical = 12.0,
-    this.color = AppColors.primaryButtonColor,
+    this.color = const Color(0xFF1B6EF7),
+
     this.textColor = Colors.white,
   });
 
@@ -24,12 +25,14 @@ class CustomButton extends StatelessWidget {
     return GestureDetector(
       onTap: onPressed,
       child: Container(
-        width: double.infinity,
-        padding: EdgeInsets.symmetric(horizontal: 24, vertical: vertical),
+        width: 360,
+        padding: EdgeInsets.symmetric(horizontal: 20, vertical: 16),
         clipBehavior: Clip.antiAlias,
         decoration: ShapeDecoration(
           color: color ?? AppColors.primaryButtonColor,
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(30),
+          ),
           shadows: const [
             BoxShadow(
               color: Color(0x0C000000),
