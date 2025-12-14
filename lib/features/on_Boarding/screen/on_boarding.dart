@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:testapp/core/const/icons_path.dart';
 
 class OnboardingScreen extends StatelessWidget {
   const OnboardingScreen({super.key});
@@ -10,10 +11,10 @@ class OnboardingScreen extends StatelessWidget {
       body: Center(
         child: Column(
           mainAxisSize: MainAxisSize.min,
-          children: const [
-            Icon(Icons.flutter_dash, size: 100, color: Colors.deepPurple),
-            SizedBox(height: 20),
-            Text(
+          children: [
+            Image.asset(IconsPath.carIcon, width: 100, height: 100),
+            const SizedBox(height: 20),
+            const Text(
               'Welcome to Flutter',
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
             ),
